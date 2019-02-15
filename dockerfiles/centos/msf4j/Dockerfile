@@ -18,7 +18,7 @@
 
 # set to latest Centos
 FROM centos:7
-MAINTAINER WSO2 Docker Maintainers "dev@wso2.org"
+MAINTAINER Join Treinamentos e Governanca Team "training@jointreinamentos.com.br"
 
 # set user configurations
 ARG USER=wso2carbon

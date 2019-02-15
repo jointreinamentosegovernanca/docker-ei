@@ -18,7 +18,7 @@
 
 # set to latest Centos
 FROM centos:7
-MAINTAINER WSO2 Docker Maintainers "dev@wso2.org"
+MAINTAINER Join Treinamentos e Governanca Team "training@jointreinamentos.com.br"
 
 # set user configurations
 ARG USER=wso2carbon
@@ -58,7 +58,7 @@ RUN groupadd --system -g ${USER_GROUP_ID} ${USER_GROUP} && \
 COPY --chown=wso2carbon:wso2 ${FILES}/${JDK} ${USER_HOME}/java/
 COPY --chown=wso2carbon:wso2 ${FILES}/${WSO2_SERVER_PACK}/ ${WSO2_SERVER_HOME}/
 # copy mysql connector jar to the server as a third party library
-COPY --chown=wso2carbon:wso2 ${FILES}/mysql-connector-java-*-bin.jar ${WSO2_SERVER_HOME}/wso2/analytics/lib/
+COPY --chown=wso2carbon:wso2 ${FILES}/mysql-connector-java-*.jar ${WSO2_SERVER_HOME}/wso2/analytics/lib/
 
 # set the user and work directory
 USER ${USER_ID}
